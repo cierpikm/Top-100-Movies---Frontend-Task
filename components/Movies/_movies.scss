@@ -1,14 +1,67 @@
 .movies-list {
-  position: fixed;
-  right: 12vw;
-  top: 0;
-  bottom: 0;
   margin: auto;
-
+  width: 38vw;
   overflow-y: scroll;
-  max-height: 70%;
+  max-height: 65%;
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    width: 100%;
+    margin-bottom: 20vh;
+  }
+}
+
+.movie-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 35px;
+
+  picture {
+    align-self: flex-start;
+  }
+
+  .description {
+    max-width: 80%;
+    padding-right: 15px;
+
+    @media (max-width: $breakpoint-lg) {
+      max-width: 60%;
+    }
+
+    h5 {
+      font-weight: 500;
+    }
+
+    h6 {
+      font-weight: 400;
+    }
+
+    p {
+      font-weight: 300;
+      color: gray;
+    }
+
+    .arrow {
+      border: solid gray;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .up {
+      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+    }
+
+    .down {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
   }
 }

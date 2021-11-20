@@ -1,30 +1,38 @@
 @font-face {
-  font-family: "MPLUS2";
-  src: url("./fonts/MPLUS2/MPLUS2-Light.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Light.ttf") format("truetype"),
+    url("./fonts/Poppins/Poppins-Light.woff2") format("woff2"),
+    url("./fonts/Poppins/Poppins-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "MPLUS2";
-  src: url("./fonts/MPLUS2/MPLUS2-Regular.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Regular.ttf") format("truetype"),
+    url("./fonts/Poppins/Poppins-Regular.woff2") format("woff2"),
+    url("./fonts/Poppins/Poppins-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "MPLUS2";
-  src: url("./fonts/MPLUS2/MPLUS2-Medium.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Medium.ttf") format("truetype"),
+    url("./fonts/Poppins/Poppins-Medium.woff2") format("woff2"),
+    url("./fonts/Poppins/Poppins-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "MPLUS2";
-  src: url("./fonts/MPLUS2/MPLUS2-SemiBold.ttf") format("truetype");
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-SemiBold.ttf") format("truetype"),
+    url("./fonts/Poppins/Poppins-SemiBold.woff2") format("woff2"),
+    url("./fonts/Poppins/Poppins-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -32,7 +40,9 @@
 
 @font-face {
   font-family: "Poppins";
-  src: url("./fonts/MPLUS2/MPLUS2-Bold.ttf") format("truetype");
+  src: url("./fonts/Poppins/Poppins-Bold.ttf") format("truetype"),
+    url("./fonts/Poppins/Poppins-Bold.woff2") format("woff2"),
+    url("./fonts/Poppins/Poppins-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useRouter } from "next/dist/client/router";
 
 import { ListGroup } from "react-bootstrap";
+
+import Play from "../svg/play";
 
 const Item = ({
   imageDesktop,
@@ -9,6 +12,7 @@ const Item = ({
   category,
   description,
   rank,
+  link,
 }: {
   imageDesktop: string;
   imageMobile: string;
@@ -16,8 +20,10 @@ const Item = ({
   category: string;
   description: string;
   rank: number;
+  link: string;
 }) => {
   const [textExpand, setTextExpand] = useState<boolean>(false);
+  const { push } = useRouter();
 
   const truncateText = (text: string, length: number) => {
     if (text.length <= length) {
@@ -42,11 +48,18 @@ const Item = ({
           </p>
         </div>
       </div>
-
-      <picture>
-        <source srcSet={imageDesktop} media="(min-width: 992px)" />
-        <img src={imageMobile} alt="zdjęcie kobiety" />
-      </picture>
+      <div
+        onClick={() => {
+          push("/video?url=" + link + "&title=" + title);
+        }}
+        className="img-wrapper"
+      >
+        <picture className="img">
+          <source srcSet={imageDesktop} media="(min-width: 992px)" />
+          <img src={imageMobile} alt="zdjęcie kobiety" />
+        </picture>
+        <Play className="play-icon" />
+      </div>
     </ListGroup.Item>
   );
 };

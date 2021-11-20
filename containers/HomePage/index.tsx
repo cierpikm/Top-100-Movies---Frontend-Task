@@ -17,7 +17,6 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const HomePage = ({ movies }: { movies: Array<MovieType> }) => {
-  console.log(movies.map((d) => d));
   return (
     <Container className="wrapper">
       <Heading />

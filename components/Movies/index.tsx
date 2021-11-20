@@ -17,6 +17,7 @@ const Movies = ({ movies }: { movies: Array<MovieType> }) => {
           category={m.category.attributes.term}
           description={m.summary.label}
           rank={index + 1}
+          link={m.link[1].attributes.href}
         />
       ))}
     </ListGroup>

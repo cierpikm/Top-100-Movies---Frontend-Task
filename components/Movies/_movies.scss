@@ -45,10 +45,6 @@
     }
   }
 
-  picture {
-    align-self: flex-start;
-  }
-
   .description {
     max-width: 80%;
     padding-right: 15px;
@@ -88,5 +84,32 @@
       transform: rotate(45deg);
       -webkit-transform: rotate(45deg);
     }
+  }
+}
+
+.img-wrapper {
+  position: relative;
+  align-self: flex-start;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.play-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+
+  opacity: 0;
+  transition: opacity 0.3s linear;
+
+  @media (max-width: $breakpoint-lg) {
+    opacity: 1;
+    transform: scale(0.7);
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }

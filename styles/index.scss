@@ -3,5 +3,8 @@
 @import "./variables";
 @import "./fonts";
 @import "./typography";
+@import "./global";
+
+@import "./components/Footer/footer";
 
 @import "./containers/HomePage/home-container";

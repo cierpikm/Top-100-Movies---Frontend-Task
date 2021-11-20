@@ -8,12 +8,14 @@ const Item = ({
   title,
   category,
   description,
+  rank,
 }: {
   imageDesktop: string;
   imageMobile: string;
   title: string;
   category: string;
   description: string;
+  rank: number;
 }) => {
   const [textExpand, setTextExpand] = useState<boolean>(false);
 
@@ -26,6 +28,7 @@ const Item = ({
 
   return (
     <ListGroup.Item className="movie-item">
+      <div className="badge-rank">{rank}</div>
       <div className="description">
         <h5>{title}</h5>
         <h6>{category}</h6>

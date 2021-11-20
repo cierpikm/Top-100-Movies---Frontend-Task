@@ -1,10 +1,1 @@
-import React from "react";
-import type { NextPage } from "next";
-
-import HomePage from "../containers/HomePage";
-
-const Home: NextPage = () => {
-  return <HomePage />;
-};
-
-export default Home;
+export { default, getStaticProps } from "../containers/HomePage";

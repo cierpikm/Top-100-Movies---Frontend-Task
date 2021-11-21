@@ -1,15 +1,18 @@
 import React from "react";
 
-import { Linkedin, Github } from "react-bootstrap-icons";
+import { Linkedin, Github, Envelope } from "react-bootstrap-icons";
 
 const Footer = () => {
   return (
     <footer className="text-center">
       <nav className="footer-social-links">
-        <a href="#!" className="social-link">
+        <a href="mailto:cierpikowskimaciej@gmail.com" className="social-link">
+          <Envelope />
+        </a>
+        <a href="https://github.com//cierpikm" className="social-link">
           <Github />
         </a>
-        <a href="#!" className="social-link">
+        <a href="https://www.linkedin.com/in/maciej-cierpikowski/" className="social-link">
           <Linkedin />
         </a>
       </nav>

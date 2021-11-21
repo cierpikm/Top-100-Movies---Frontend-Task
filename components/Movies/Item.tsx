@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/dist/client/router";
 
-import { ListGroup } from "react-bootstrap";
+import { Button, ListGroup } from "react-bootstrap";
 
 import Play from "../svg/play";
 
@@ -33,34 +33,45 @@ const Item = ({
   };
 
   return (
-    <ListGroup.Item className="movie-item">
-      <div className="badge-rank">{rank}</div>
-      <div className="description">
-        <h5>{title}</h5>
-        <h6>{category}</h6>
-        <div>
-          <p>
-            {textExpand ? description : truncateText(description, 50)}
-            <span
-              onClick={() => setTextExpand(!textExpand)}
-              className={`arrow ${textExpand ? "up" : "down"}`}
-            />
-          </p>
+    <>
+      <ListGroup.Item className="movie-item">
+        <div className="badge-rank">{rank}</div>
+        <div className="description">
+          <h5>{title}</h5>
+          <h6>{category}</h6>
+          <div>
+            <p>
+              {textExpand ? description : truncateText(description, 50)}
+              <span
+                onClick={() => setTextExpand(!textExpand)}
+                className={`arrow ${textExpand ? "up" : "down"}`}
+              />
+            </p>
+          </div>
         </div>
-      </div>
-      <div
+
+        <div
+          onClick={() => {
+            push("/video?url=" + link + "&title=" + title);
+          }}
+          className="img-wrapper"
+        >
+          <picture className="img">
+            <source srcSet={imageDesktop} media="(min-width: 992px)" />
+            <img src={imageMobile} alt="zdjęcie kobiety" />
+          </picture>
+          <Play className="play-icon" />
+        </div>
+      </ListGroup.Item>
+      <Button
         onClick={() => {
           push("/video?url=" + link + "&title=" + title);
         }}
-        className="img-wrapper"
+        className="button"
       >
-        <picture className="img">
-          <source srcSet={imageDesktop} media="(min-width: 992px)" />
-          <img src={imageMobile} alt="zdjęcie kobiety" />
-        </picture>
-        <Play className="play-icon" />
-      </div>
-    </ListGroup.Item>
+        See movie trailer
+      </Button>
+    </>
   );
 };
 

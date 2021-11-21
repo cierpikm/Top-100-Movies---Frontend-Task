@@ -47,6 +47,7 @@ class vjsEpisodeList extends videojs.getComponent("Component") {
     );
   }
 }
+
 vjsComponent.registerComponent("vjsEpisodeList", vjsEpisodeList);
 
 export default vjsEpisodeList;

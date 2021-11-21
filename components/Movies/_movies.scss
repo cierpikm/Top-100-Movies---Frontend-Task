@@ -40,9 +40,7 @@
     line-height: 1;
     color: #fff;
 
-    @media (max-width: $breakpoint-md) {
-      clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 100%, 0 0);
-    }
+    clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 100%, 0 0);
   }
 
   .description {
@@ -111,5 +109,17 @@
 
   &:hover {
     opacity: 1;
+  }
+}
+
+.button {
+  width: 100%;
+  background-color: #ca4355;
+  border: 1px solid #ca4355;
+  margin-bottom: 10px;
+
+  &:hover {
+    background-color: #93145c;
+    border-color: #93145c;
   }
 }

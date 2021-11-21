@@ -57,17 +57,13 @@ export default function VideoLibrary({
         }}
         className="video-library"
       >
-        <Accordion
-          id="video-accordion"
-          className="movies-list-accordion"
-          defaultActiveKey="285532297"
-        >
+        <Accordion id="video-accordion" className="movies-list-accordion" defaultActiveKey={url}>
           {videosData &&
             videosData.map((s: MovieType) => (
               <VideoLibraryItem
                 key={s.id.label}
                 title={s.title.label}
-                eventKey={s.id.attributes["im:id"]}
+                eventKey={s.link[1].attributes.href}
                 imageSrc={s["im:image"][2].label}
                 onClick={() => {
                   window.location.href =
